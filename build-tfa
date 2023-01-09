@@ -1,0 +1,7 @@
+
+source /opt/st/myir/3.1-snapshot/environment-setup-cortexa7t2hf-neon-vfpv4-ostl-linux-gnueabi
+cp ./Makefile.sdk ../
+
+#make -f $PWD/../Makefile.sdk all TF_A_CONFIG=serialboot
+#make -f $PWD/../Makefile.sdk all TF_A_CONFIG=optee
+make -f $PWD/../Makefile.sdk TF_A_CONFIG=trusted all
